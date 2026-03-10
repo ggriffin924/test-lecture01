@@ -1,0 +1,66 @@
+# Workshop Reference Guide: Project Setup & Gemini CLI
+
+This guide provides a step-by-step walkthrough of the commands and processes used to initialize this project, configure Gemini CLI, and deploy to GitHub.
+
+## 1. Local Repository Initialization
+First, we set up the local environment and git tracking.
+
+```powershell
+# Initialize a new Git repository
+git init
+
+# Create a .gitignore to exclude large or unnecessary files
+# Example: echo "*.tar.gz" > .gitignore
+```
+
+## 2. Gemini CLI Customization (GEMINI.md)
+We created a `GEMINI.md` file to give the AI specific instructions for this project. This file is the "brain" for the AI's behavior in your workspace.
+
+**Key Mandates Added:**
+*   Explicit authorization for Git operations.
+*   Project goals and time constraints (45-min workshop).
+*   Coding standards (Kebab-case, clean scripts).
+
+## 3. GitHub Authentication (SSH)
+To push code securely without entering passwords, we used an existing SSH key.
+
+```powershell
+# Check for existing public keys
+ls ~/.ssh/*.pub
+
+# Copy the key to clipboard for GitHub (Windows)
+type $HOME\.ssh\id_rsa.pub | clip
+
+# Test connection and trust GitHub's host key
+ssh -T git@github.com
+```
+
+## 4. Connecting to GitHub
+We linked the local repo to a remote repository on GitHub.
+
+```powershell
+# Add the remote origin
+git remote add origin git@github.com:username/reponame.git
+
+# Push the initial main branch
+git push -u origin main
+```
+
+## 5. Rapid Scaffolding
+Using Gemini CLI, we generated a functional `index.html` dashboard and a `README.md` outline in seconds.
+
+```powershell
+# Command to view the dashboard locally
+Start-Process .\index.html
+```
+
+## 6. Syncing Changes
+Frequent commits and pushes ensure your work is saved to the cloud.
+
+```powershell
+# Stage, commit, and push (PowerShell syntax)
+git add .; git commit -m "Your descriptive message"; git push
+```
+
+---
+*Reference for the PowerShell & Gemini CLI Workshop.*
