@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop Dashboard</title>
+    <style>
+        :root {
+            --primary: #0078d4;
+            --bg: #f3f2f1;
+            --text: #323130;
+            --card-bg: #ffffff;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 1rem;
+        }
+        h1 { color: var(--primary); }
+        .status-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            background: #dff6dd;
+            color: #107c10;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        .links {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        .btn {
+            display: block;
+            text-align: center;
+            padding: 0.75rem;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: opacity 0.2s;
+        }
+        .btn:hover { opacity: 0.8; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🛠️ Workshop Dashboard</h1>
+            <p>Built with Gemini CLI & PowerShell</p>
+        </header>
+
+        <section class="card">
+            <h2>Current Status <span class="status-badge">Live</span></h2>
+            <p>Environment: <strong>Local Development</strong></p>
+            <p>Last Sync: <span id="time"></span></p>
+        </section>
+
+        <section class="links">
+            <a href="https://github.com/ggriffin924/test-lecture01" class="btn" target="_blank">View on GitHub</a>
+            <a href="https://learn.microsoft.com/en-us/powershell/" class="btn" target="_blank">PowerShell Docs</a>
+        </section>
+    </div>
+
+    <script>
+        document.getElementById('time').textContent = new Date().toLocaleTimeString();
+    </script>
+</body>
+</html>

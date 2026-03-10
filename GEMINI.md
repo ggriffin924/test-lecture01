@@ -3,21 +3,19 @@
 This file provides project-specific instructions and context for Gemini CLI. These mandates take precedence over general defaults.
 
 ## Project Overview
-- **Goal:** [Describe the primary purpose of this project]
-- **Stack:** [e.g., React, TypeScript, Node.js, Python, Go]
-- **Key Constraints:** [e.g., Must support IE11, No external dependencies]
+- **Goal:** Provide a 45-minute workshop demonstrating PowerShell, GitHub repository setup, and Gemini CLI integration on a local PC.
+- **Stack:** PowerShell, Git, Gemini CLI.
+- **Key Constraints:** 45-minute time limit. Avoid large downloads or slow processes. Focus on rapid local execution and immediate visual feedback.
 
 ## Engineering Standards
 ### Coding Style & Conventions
-- **Naming:** [e.g., camelCase for variables, PascalCase for components]
-- **Formatting:** [e.g., Use Prettier with the provided .prettierrc]
-- **Types:** [e.g., Prefer interfaces over types, use strict null checks]
-- **Documentation:** [e.g., JSDoc for all public functions, mandatory README updates]
+- **Naming:** Kebab-case for filenames, simple and descriptive variables.
+- **Formatting:** Clean, readable scripts without heavy boilerplate.
+- **Documentation:** Minimal but clear comments to explain steps to students.
 
 ### Architecture & Patterns
-- **Pattern:** [e.g., Clean Architecture, MVC, Functional Programming]
-- **State Management:** [e.g., Redux, Context API, Zustand]
-- **Data Flow:** [e.g., Unidirectional, Event-driven]
+- **Pattern:** Simple procedural scripts or basic single-file web pages.
+- **Data Flow:** Local-first development with frequent Git pushes to demonstrate version control.
 
 ## Testing Strategy
 - **Framework:** [e.g., Jest, Vitest, Pytest]
