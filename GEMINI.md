@@ -33,4 +33,5 @@ This file provides project-specific instructions and context for Gemini CLI. The
 - **Tone:** Professional and terse.
 - **Automation:** Always run lint --fix after edits.
 - **Safety:** Never modify the .env.example file.
+- **Screenshots:** When the user asks to "take a look" at what they are working on or to check a screenshot, automatically identify and analyze the most recently modified image file in the `screenshots/` directory.
 - **Source Control:** Gemini is explicitly authorized to perform Git operations (stage, commit, branch, etc.) as needed to fulfill tasks in this project.
