@@ -62,6 +62,35 @@
             transition: opacity 0.2s;
         }
         .btn:hover { opacity: 0.8; }
+        .profiles {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .profile-card {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 1rem;
+            border: 1px solid #e1dfdd;
+            border-radius: 6px;
+        }
+        .profile-card img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--primary);
+        }
+        .profile-card h3 {
+            margin: 0 0 0.25rem 0;
+            color: var(--primary);
+        }
+        .profile-card p {
+            margin: 0;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
     </style>
 </head>
 <body>
@@ -75,6 +104,36 @@
             <h2>Current Status <span class="status-badge">Live</span></h2>
             <p>Environment: <strong>Local Development</strong></p>
             <p>Last Sync: <span id="time"></span></p>
+        </section>
+
+        <section class="card">
+            <h2>👥 Workshop Participants</h2>
+            <div class="profiles">
+                <!-- Profile 1 -->
+                <div class="profile-card">
+                    <img src="images/students/placeholder1.jpg" alt="Student 1" onerror="this.src='https://via.placeholder.com/80?text=S1'">
+                    <div>
+                        <h3>Alex Chen</h3>
+                        <p>Senior Systems Engineer focusing on automation workflows and cloud infrastructure optimization.</p>
+                    </div>
+                </div>
+                <!-- Profile 2 -->
+                <div class="profile-card">
+                    <img src="images/students/placeholder2.jpg" alt="Student 2" onerror="this.src='https://via.placeholder.com/80?text=S2'">
+                    <div>
+                        <h3>Jordan Smith</h3>
+                        <p>Full-stack Developer passionate about improving developer experience through AI-driven tooling.</p>
+                    </div>
+                </div>
+                <!-- Profile 3 -->
+                <div class="profile-card">
+                    <img src="images/students/placeholder3.jpg" alt="Student 3" onerror="this.src='https://via.placeholder.com/80?text=S3'">
+                    <div>
+                        <h3>Taylor Reed</h3>
+                        <p>Data Analyst specializing in PowerShell scripting for rapid data processing and reporting.</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section class="links">
