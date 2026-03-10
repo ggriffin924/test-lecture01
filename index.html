@@ -10,6 +10,17 @@
             --bg: #f3f2f1;
             --text: #323130;
             --card-bg: #ffffff;
+            --border: #e1dfdd;
+            --badge-bg: #dff6dd;
+            --badge-text: #107c10;
+        }
+        [data-theme="dark"] {
+            --bg: #201f1e;
+            --text: #ffffff;
+            --card-bg: #2b2b2b;
+            --border: #3b3a39;
+            --badge-bg: #107c10;
+            --badge-text: #dff6dd;
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -20,6 +31,7 @@
             flex-direction: column;
             align-items: center;
             padding: 2rem;
+            transition: background-color 0.3s, color 0.3s;
         }
         .container {
             max-width: 800px;
@@ -28,6 +40,18 @@
         header {
             text-align: center;
             margin-bottom: 2rem;
+            position: relative;
+        }
+        .theme-toggle {
+            position: absolute;
+            top: 0;
+            right: 0;
+            cursor: pointer;
+            padding: 0.5rem;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            color: var(--text);
         }
         .card {
             background: var(--card-bg);
@@ -35,14 +59,15 @@
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             margin-bottom: 1rem;
+            border: 1px solid var(--border);
         }
         h1 { color: var(--primary); }
         .status-badge {
             display: inline-block;
             padding: 0.25rem 0.75rem;
             border-radius: 20px;
-            background: #dff6dd;
-            color: #107c10;
+            background: var(--badge-bg);
+            color: var(--badge-text);
             font-weight: bold;
             font-size: 0.9rem;
         }
@@ -72,7 +97,7 @@
             align-items: center;
             gap: 1.5rem;
             padding: 1rem;
-            border: 1px solid #e1dfdd;
+            border: 1px solid var(--border);
             border-radius: 6px;
         }
         .profile-card img {
@@ -96,6 +121,7 @@
 <body>
     <div class="container">
         <header>
+            <button class="theme-toggle" id="themeToggle">🌓 Toggle Theme</button>
             <h1>🛠️ Workshop Dashboard</h1>
             <p>Built with Gemini CLI & PowerShell</p>
         </header>
@@ -144,6 +170,24 @@
 
     <script>
         document.getElementById('time').textContent = new Date().toLocaleTimeString();
+
+        const themeToggle = document.getElementById('themeToggle');
+        const currentTheme = localStorage.getItem('theme') || 'light';
+
+        if (currentTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            let theme = document.documentElement.getAttribute('data-theme');
+            if (theme === 'dark') {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
     </script>
 </body>
 </html>
