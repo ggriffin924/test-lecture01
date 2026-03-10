@@ -54,7 +54,18 @@ Using Gemini CLI, we generated a functional `index.html` dashboard and a `README
 Start-Process .\index.html
 ```
 
-## 6. Syncing Changes
+## 6. Automation (PowerShell Watcher)
+We built a `Watch-Workshop.ps1` script to monitor the `images/students` folder. This script automatically updates the `index.html` with new profiles and AI-generated bios whenever you drop in a photo.
+
+```powershell
+# Run the watcher script
+.\Watch-Workshop.ps1
+```
+
+## 7. UI Enhancements (Theme Toggle)
+The dashboard includes a light/dark theme toggle that uses CSS variables and JavaScript to persist preferences in `localStorage`.
+
+## 8. Syncing Changes
 Frequent commits and pushes ensure your work is saved to the cloud.
 
 ```powershell
