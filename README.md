@@ -15,6 +15,7 @@ Welcome to the 45-minute rapid development workshop! In this session, we'll use 
 
 *   **PowerShell 7+**: Our primary shell environment.
 *   **Git**: Version control for tracking our work.
+*   **Visual Studio Code**: Our code editor. Pro tip: Type `code .` in your terminal to open the current folder!
 *   **Gemini CLI**: Our AI-powered pair programmer.
 *   **SSH Key**: Configured for GitHub authentication.
 

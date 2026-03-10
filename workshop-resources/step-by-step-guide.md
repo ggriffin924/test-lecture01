@@ -2,6 +2,13 @@
 
 This guide provides a step-by-step walkthrough of the commands and processes used to initialize this project, configure Gemini CLI, and deploy to GitHub.
 
+## 🛠️ Required Tools
+Before starting, ensure you have the following installed:
+- **PowerShell 7+**: The modern cross-platform shell.
+- **Git**: Essential for version control.
+- **Visual Studio Code**: Recommended editor. You can open your project by typing `code .` in PowerShell.
+- **Gemini CLI**: The AI assistant used throughout this workshop.
+
 ## 1. Local Repository Initialization
 First, we set up the local environment and git tracking.
 
